@@ -45,7 +45,7 @@ flake8:
 	flake8 --ignore=$(FLAKE8_IGNORE),E402 tests/
 
 pylint:
-	find ./$(NAME) ./tests -name \*.py | xargs pylint --rcfile .pylintrc
+	find ./$(NAME) ./tests -name \*.py | xargs pylint --rcfile pylintrc
 
 check:
 	@echo "Check-manifest disabled pending https://github.com/mgedmin/check-manifest/issues/68"
