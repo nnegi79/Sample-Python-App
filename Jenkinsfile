@@ -57,7 +57,7 @@ pipeline {
                 """
                 sh """
                     export PATH=${VIRTUAL_ENV}/bin:${PATH}
-                    make pylint | tee report/pylint.log || true
+                    make pylint | tee report/pylint.log 
                 """
                 step([$class: 'WarningsPublisher',
                   parserConfigurations: [[
